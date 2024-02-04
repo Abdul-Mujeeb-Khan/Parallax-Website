@@ -119,6 +119,15 @@ h3 {
   }
 }
 
+@media screen and (min-width: 620px) and (max-width: 1484px) {
+  .sun {
+    width: 35rem;
+    animation: parallax-mid linear;
+    animation-timeline: scroll();
+    z-index: 2;
+  }
+}
+
 @keyframes parallax {
   to {
     transform: translateY(700px);
@@ -128,5 +137,11 @@ h3 {
 @keyframes parallax-android {
   to {
     transform: translateY(1040px);
+  }
+}
+
+@keyframes parallax-mid {
+  to {
+    transform: translateY(580px);
   }
 }
