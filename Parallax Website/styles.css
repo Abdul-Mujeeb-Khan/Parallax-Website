@@ -127,6 +127,6 @@ h3 {
 
 @keyframes parallax-android {
   to {
-    transform: translateY(1100px);
+    transform: translateY(1040px);
   }
 }
