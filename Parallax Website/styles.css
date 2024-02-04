@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
 }
 
+.all {
+  position: absolute;
+  z-index: 10;
+}
+
 .parallax-2 {
   background: url(night1.svg) no-repeat;
   background-size: cover;
@@ -100,10 +105,28 @@ h3 {
 
 .sun {
   width: 35rem;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  z-index: 2;
 }
 
 @media screen and (max-width: 440px) {
   .sun {
     width: 20rem;
+    animation: parallax-android linear;
+    animation-timeline: scroll();
+    z-index: 2;
+  }
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(700px);
+  }
+}
+
+@keyframes parallax-android {
+  to {
+    transform: translateY(1100px);
   }
 }
