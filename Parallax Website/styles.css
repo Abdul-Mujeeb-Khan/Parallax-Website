@@ -10,11 +10,6 @@ html {
   font-size: 62.5%;
 }
 
-.all {
-  position: absolute;
-  z-index: 10;
-}
-
 .parallax-2 {
   background: url(night1.svg) no-repeat;
   background-size: cover;
@@ -42,7 +37,7 @@ body {
 h1 {
   margin-top: 0;
   text-align: center;
-  font-size: 11rem;
+  font-size: 10rem;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -115,7 +110,6 @@ h3 {
     width: 20rem;
     animation: parallax-android linear;
     animation-timeline: scroll();
-    z-index: 2;
   }
 }
 
@@ -124,13 +118,12 @@ h3 {
     width: 35rem;
     animation: parallax-mid linear;
     animation-timeline: scroll();
-    z-index: 2;
   }
 }
 
 @keyframes parallax {
   to {
-    transform: translateY(700px);
+    transform: translateY(600px);
   }
 }
 
@@ -142,6 +135,6 @@ h3 {
 
 @keyframes parallax-mid {
   to {
-    transform: translateY(580px);
+    transform: translateY(500px);
   }
 }
