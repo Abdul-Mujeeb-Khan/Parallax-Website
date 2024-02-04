@@ -10,11 +10,22 @@ html {
   font-size: 62.5%;
 }
 
+.parallax-2 {
+  background: url(night1.svg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .parallax-1 {
   background: url(wintery-sunburst.svg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+.parallax-2 h1 {
+  color: rgb(70, 76, 83);
 }
 
 body {
@@ -24,6 +35,7 @@ body {
 }
 
 h1 {
+  margin-top: 0;
   text-align: center;
   font-size: 11rem;
   color: rgba(0, 0, 0, 0.4);
@@ -78,4 +90,20 @@ h3 {
 .socials img {
   max-width: 2.5rem;
   margin-bottom: 3rem;
+}
+
+.sundiv {
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sun {
+  width: 35rem;
+}
+
+@media screen and (max-width: 440px) {
+  .sun {
+    width: 20rem;
+  }
 }
