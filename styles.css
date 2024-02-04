@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.parallax-2 {
+  background: url(night1.svg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.parallax-1 {
+  background: url(wintery-sunburst.svg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.parallax-2 h1 {
+  color: rgb(70, 76, 83);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f1f1f1;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 10rem;
+  }
+}
+
+.parallax-inner {
+  padding: 16% 0;
+}
+
+h2 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 2rem;
+  text-align: left;
+  margin: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px) {
+  .socials img {
+    margin: 0 5rem;
+  }
+  .socials {
+    justify-content: center;
+  }
+}
+
+.socials img {
+  max-width: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.sundiv {
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sun {
+  width: 35rem;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  z-index: 2;
+}
+
+@media screen and (max-width: 440px) {
+  .sun {
+    width: 20rem;
+    animation: parallax-android linear;
+    animation-timeline: scroll();
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 1484px) {
+  .sun {
+    width: 35rem;
+    animation: parallax-mid linear;
+    animation-timeline: scroll();
+  }
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(600px);
+  }
+}
+
+@keyframes parallax-android {
+  to {
+    transform: translateY(1040px);
+  }
+}
+
+@keyframes parallax-mid {
+  to {
+    transform: translateY(500px);
+  }
+}
